@@ -17,7 +17,8 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-               bat "java -jar target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar"
+                
+               bat "java -jar javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar"
                bat "docker build -t java_sample ."
                bat "docker run java_sample"
             }
