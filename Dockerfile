@@ -1,5 +1,5 @@
 FROM maven:3.6.0-jdk-11-slim AS build
-#COPY src /home/app/src
+COPY src /src/main/resources
 #COPY pom.xml /home/app
 RUN mvn -f pom.xml clean package
 
